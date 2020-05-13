@@ -218,7 +218,7 @@ class StanModel:
     'parameters ...
     >>> m.model_name
     'anon_model'
-
+/eiuge
     """
     def __init__(self, file=None, charset='utf-8', model_name="anon_model",
                  model_code=None, stanc_ret=None, include_paths=None,
@@ -351,6 +351,7 @@ class StanModel:
                 '-Wno-unused-function',
                 '-Wno-uninitialized',
                 '-std=c++1y',
+                '-Wl,-Bsymbolic-functions',
             ] + extra_compile_args
 
         distutils.log.set_verbosity(verbose)
